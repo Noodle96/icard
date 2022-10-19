@@ -1,0 +1,90 @@
+PLUGINS TO VS
+- ES7 React/Redux/GraphQL/React-Native snippets
+- Material Icon Theme
+- Prettier - Code formatter
+- Pylance
+- Jupyter, Jupyter keymap
+
+INSTALLING PROGRAMS
+- Install Python3
+- Install Node(search install node in OS) to run React Native
+    To verify:
+    - node -v 
+    - npm -v
+- Install yarn(search install yarn in OS)
+    To verify:
+    - yarn -v
+
+
+CREATE A PROJECT DJANGO TO BACKEND
+- mkdir iCard(ROOT_icard)
+- cd iCard; mkdir icard_django; cd icard_django
+- python3 -m venv envs/icard
+- source ./envs/icard/bin/activate
+- pip3 install django
+- django-admin startproject icard
+- cd icard; python3 manage.py runserver
+- //to migrate
+- python3 manage.py migrate
+- python3 manage.py runserver
+
+
+INSTALLING DJANGO REST FRAMEWORK(https://www.django-rest-framework.org/)
+go to .../icard_django
+-pip3 install djangorestframework
+
+paste 'rest_framework', in INSTALLED_APPS in setting.py 
+
+then go to icard
+-	python3 manage.py runserver
+
+CONFIGURANDO LA DOCUMENTACION DE LA
+REST API(https://drf-yasg.readthedocs.io/en/stable/index.html)
+-go to ROOT_icard/icard_django/icard
+-run pip3 install drf-yasg
+-paste 'drf-yasg' in INSTALLED_APPS in setting.py
+ go to documentation and paste the section url.py in my url.py 
+
+- then to know if there is some new:
+- python3 manage.py runserver
+- python3 manage.py makemigration
+
+CREATE THE PROJECT REACT TO FRONTEND
+- go to ROOT_icard
+- run npx create-react-app icard_react
+- cd icard_react; yarn; yarn start
+
+TO GET UP , BACKEND=>(icard_django) and FRONTEND(icard_react), open two terminals
+and go to ROOT_icard()
+
+ ----------------------------------- -----------------------------
+|   ROOT_icard/icard_django/icard   |   ROOT_icard/icard_react   | 
+ ----------------------------------- -----------------------------
+|   python3 manage.py runserver     |   yarn start               | 
+|----------------------------------- -----------------------------
+
+INSTALANDO Y CONFIGURANDO SEMANTIC UI REACT
+¿ Qué es Semantic UI React ?
+ - Biblioteca de componentes que se va utilizar en el frontend(react)
+ - create dasboard, administrador(Bar), responsive(view of client)
+
+In ROOT_icard/icard_react
+- yarn add semantic-ui-react semantic-ui-css
+- go index.js and paste => import 'semantic-ui-css/semantic.min.css'
+- in Apps.js run snippet rfc to create the body
+- then run yarn start
+- if there is a error, run yarn add react-scripts@4.0.3
+
+CONFIGURANDO CLIENTE(REACT) CON SAAS
+- create in src/App.scss
+- go ROOT_icard/icard_react and run yarn add sass
+- then yarn start
+
+CONFIFURACION SISTEMA DE RUTAS CLIENTE(REACT) - React Router Dom v5
+- go ROOT_icard/icard_react and run yarn add react-router-dom
+- go src/ and create  folder routes
+- config navigation.js
+
+CONFIGURANDO REACT ROUTER V6
+- go ROOT_icard/icard_react and run yarn add react-router-dom@6
+-yarn add lodash
