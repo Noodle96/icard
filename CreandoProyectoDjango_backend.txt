@@ -88,3 +88,28 @@ CONFIFURACION SISTEMA DE RUTAS CLIENTE(REACT) - React Router Dom v5
 CONFIGURANDO REACT ROUTER V6
 - go ROOT_icard/icard_react and run yarn add react-router-dom@6
 -yarn add lodash
+
+
+
+
+[SISTEMAS DE USUARIO Y AUTENTIFICACION]
+CREANDO SUPERUSER EN EL PANEL DE DJANGO
+- python3 manage.py createsuperuser
+
+MODIFICACION DEL MODELO USUARIO
+-go: [ROOT_ICARD/icard_django/icard/]
+  -Reestructurar db -> delete db.sqlite3
+  -then, python3 manage.py --help
+    python3 manage.py  startapp users
+  -then, go setting.py, add final:
+    #USERS
+    AUTH_USER_MODEL = 'users.User'
+  - then, inside setting.py in INSTALLED_APPS, add 'users'
+  -then go users file that you create:
+    - go and edit models.py
+    - python3 manage.py makemigration (se creara un nuevo archivo db.sqlite3)
+    -then, python3 manage.py migrate
+    -then , createsuperuser
+
+    CAMBIAR CAMPO DE LOGIN -> edit models.py, hacer makemigration and migration
+    ADD MODEL USER IN PANEL ADMIN: edit admin.py
