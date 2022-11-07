@@ -113,3 +113,6 @@ MODIFICACION DEL MODELO USUARIO
 
     CAMBIAR CAMPO DE LOGIN -> edit models.py, hacer makemigration and migration
     ADD MODEL USER IN PANEL ADMIN: edit admin.py
+
+VALIDACION FORMULARIO
+yarn add formik yup
